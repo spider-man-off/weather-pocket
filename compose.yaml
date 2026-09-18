@@ -1,0 +1,9 @@
+services:
+  weather-pocket:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - weather-data:/data
+volumes:
+  weather-data:
